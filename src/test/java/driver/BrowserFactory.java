@@ -64,8 +64,7 @@ public class BrowserFactory {
 			capo.addArguments("--start-maximized --disable-");
 			capo.setExperimentalOption("useAutomationExtension", false);
 			capo.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-			capo.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR,
-			UnexpectedAlertBehaviour.IGNORE);
+			capo.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 			capo.setCapability(CapabilityType.PLATFORM, Platform.ANY);
 			capo.getBrowserName();
 			driver = new RemoteWebDriver(new URL(nodeURL), capo);

@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.Select;
 
 import js.jScript;
 
-public class Registro extends pageModel.Base{
+public class RegistroWeb extends pageModel.Base{
 	// WebDriver driver;
 	jScript js = new jScript();
 
@@ -33,18 +33,18 @@ public class Registro extends pageModel.Base{
 	WebElement msgError;
 
 	/////CONSTRUCTOR/////
-	public Registro(WebDriver driver) {
+	public RegistroWeb(WebDriver driver) {
 			this.driver = driver;
 			PageFactory.initElements(driver, this);
 		}
 
-	public Registro() {
+	public RegistroWeb() {
 		}
 
 	////METODOS/////
 	public void sendUsuario(String usuario) {
-		clearText(txtNombre);
-		sendKey(driver, txtNombre, usuario);
+		clearText(txtUsuario);
+		sendKey(driver, txtUsuario, usuario);
 	}
 	public void sendNombre(String nombre) {
 		clearText(txtNombre);
@@ -88,7 +88,7 @@ public class Registro extends pageModel.Base{
 		sendCorreo(correo);
 		sendTelefono(telefono);
 	}
-	public void checkyAceptar(String chk, String aceptar) {
+	public void checkyAceptar() {
 		clickTermino();
 		clickAceptar();
 	}

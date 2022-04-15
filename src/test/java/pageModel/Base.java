@@ -58,7 +58,7 @@ public class Base {
 		}
 	}
 
-	public void navegar(WebDriver driver, String url) {
+	public void navegar(String url) {
 		driver.get(url);
 		js.waitForPageToLoad(driver);
 	}
