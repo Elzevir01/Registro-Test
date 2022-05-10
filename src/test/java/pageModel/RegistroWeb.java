@@ -92,7 +92,9 @@ public class RegistroWeb extends pageModel.Base{
 		clickTermino();
 		clickAceptar();
 	}
-	
+	public void checkError(){
+		checkElement(msgError);
+	}
 	public int ranDomInt(int max, int min){
 	    System.out.println("Random value in int from "+min+" to "+max+ ":");
 	                int random_int = (int)(Math.random() * (max - min + 1) + min);

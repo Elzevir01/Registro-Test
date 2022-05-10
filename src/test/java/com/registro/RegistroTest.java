@@ -22,17 +22,20 @@ public class RegistroTest {
 	DriverFactory df = null;
 	BrowserFactory bf = null;
 	RegistroWeb rw = null;
+	String titulo= "DC: Road to Win";
 
 	@Test(dataProvider = "DP")
 	public void f(String ID, String Nombre, String Apellido, String Descripcion, String Email, String Direccion,
-			String Telefono, String Edad, String Pin, String Compania) throws InterruptedException {
+			String Telefono, String Edad, String Pin, String Compania){
 		rw = new RegistroWeb(driver);
 		rw.navegar("http://dcmassstream.myartsonline.com/RegistroAv.html");
 		rw.usuarioNombre(Apellido+ID, Nombre);
 		rw.password1y2(Nombre+ID, Nombre+ID);
 		rw.correoytelefono(Email, Telefono);
 		rw.checkyAceptar();
-		Thread.sleep(5000);
+		rw.checkError();
+		rw.esperarWeb();
+		rw.confirmarTitulo(titulo);
 	}
 
 	@DataProvider

@@ -1,5 +1,7 @@
 package pageModel;
 
+import java.time.Duration;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -78,18 +80,20 @@ public class Base {
 		elemento.clear();
 	}
 	public void esperarXpath(WebDriver driver, String elemento) {
-		@SuppressWarnings("deprecation")
-		WebDriverWait wait = new WebDriverWait(driver, 15);
+		
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elemento)));
 		
 	}
 	public void esperarCss(WebDriver driver, String elemento) {
-		@SuppressWarnings("deprecation")
-		WebDriverWait wait = new WebDriverWait(driver, 15);
+		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(elemento)));
 		
 	}
 	public void esperarWeb() {
 		js.waitForPageToLoad(driver);
+	}
+	public void confirmarTitulo(String titulo) {
+		ExpectedConditions.titleIs(titulo);
 	}
 }
