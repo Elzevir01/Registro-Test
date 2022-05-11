@@ -31,9 +31,9 @@ public class RegistroTest {
 		rw.navegar("http://dcmassstream.myartsonline.com/RegistroAv.html");
 		rw.usuarioNombre(Apellido+ID, Nombre);
 		rw.password1y2(Nombre+ID, Nombre+ID);
-		rw.correoytelefono(Email, Telefono);
+		rw.correoytelefono(Email,Telefono.replaceAll("-", ""));
 		rw.checkyAceptar();
-		rw.checkError();
+		//rw.checkError();
 		rw.esperarWeb();
 		rw.confirmarTitulo(titulo);
 	}

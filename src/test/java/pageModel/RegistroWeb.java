@@ -27,7 +27,7 @@ public class RegistroWeb extends pageModel.Base{
 	WebElement txtTelefono;
 	@FindBy(xpath = "//*[@id='terminos']")
 	WebElement chkTerminos;
-	@FindBy(xpath = "//*[@id='aceptar']")
+	@FindBy(xpath = "//button[text()='Enviar']")
 	WebElement btnAceptar;
 	@FindBy(xpath = "//*[@id='formulario__mensaje']")
 	WebElement msgError;
