@@ -7,7 +7,7 @@
     <classes>
       <class name="com.registro.RegistroTest">
         <methods>
-          <include name="f" invocation-numbers="3"/>
+          <include name="f" invocation-numbers="1"/>
           <include name="beforeTest"/>
           <include name="tearDown"/>
         </methods>

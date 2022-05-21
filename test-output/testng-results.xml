@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-10T21:51:41 ART" name="TestSuite" finished-at="2022-05-10T21:52:55 ART" duration-ms="73940">
+  <suite started-at="2022-05-21T18:34:01 ART" name="TestSuite" finished-at="2022-05-21T18:37:20 ART" duration-ms="199463">
     <groups>
     </groups>
-    <test started-at="2022-05-10T21:51:41 ART" name="CHROME" finished-at="2022-05-10T21:52:55 ART" duration-ms="73940">
+    <test started-at="2022-05-21T18:34:01 ART" name="CHROME" finished-at="2022-05-21T18:37:20 ART" duration-ms="199463">
       <class name="com.registro.RegistroTest">
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:51:41 ART" name="beforeTest" finished-at="2022-05-10T21:51:43 ART" duration-ms="1744" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:34:01 ART" name="beforeTest" finished-at="2022-05-21T18:35:17 ART" duration-ms="76371" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,7 +23,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:51:44 ART" name="f" data-provider="DP" finished-at="2022-05-10T21:51:59 ART" duration-ms="14892" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:35:34 ART" name="f" data-provider="DP" finished-at="2022-05-21T18:36:00 ART" duration-ms="25972" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,7 +79,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:51:59 ART" name="f" data-provider="DP" finished-at="2022-05-10T21:52:10 ART" duration-ms="11192" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:36:00 ART" name="f" data-provider="DP" finished-at="2022-05-21T18:36:12 ART" duration-ms="11407" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,7 +135,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:52:10 ART" name="f" data-provider="DP" finished-at="2022-05-10T21:52:20 ART" duration-ms="9789" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:36:12 ART" name="f" data-provider="DP" finished-at="2022-05-21T18:36:33 ART" duration-ms="21081" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -191,7 +191,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:52:20 ART" name="f" data-provider="DP" finished-at="2022-05-10T21:52:30 ART" duration-ms="10130" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:36:33 ART" name="f" data-provider="DP" finished-at="2022-05-21T18:36:51 ART" duration-ms="18670" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -247,7 +247,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:52:30 ART" name="f" data-provider="DP" finished-at="2022-05-10T21:52:45 ART" duration-ms="15480" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:36:51 ART" name="f" data-provider="DP" finished-at="2022-05-21T18:37:03 ART" duration-ms="11650" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -303,7 +303,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:52:45 ART" name="f" data-provider="DP" finished-at="2022-05-10T21:52:55 ART" duration-ms="9469" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:37:03 ART" name="f" data-provider="DP" finished-at="2022-05-21T18:37:14 ART" duration-ms="10849" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -359,7 +359,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-10T21:52:55 ART" name="tearDown" finished-at="2022-05-10T21:52:55 ART" duration-ms="206" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.registro.RegistroTest@957e06]" started-at="2022-05-21T18:37:14 ART" name="tearDown" finished-at="2022-05-21T18:37:20 ART" duration-ms="6064" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
