@@ -12,8 +12,8 @@ import com.mysql.cj.jdbc.result.ResultSetMetaData;
 
 public class BDClass {
 	
-    private static final String URL = "jdbc:mysql://localhost:3306/UsuariosR";
-    private static final String USUARIO = "elzevir";//"root"//3608726_sqlelzevir
+    private static final String URL = "jdbc:mysql://localhost:6603/UsuarioS";//UsuariosR
+    private static final String USUARIO = "root";//"root"//"elzevir"//3608726_sqlelzevir
     private static final String CLAVE = "password";
 
     
