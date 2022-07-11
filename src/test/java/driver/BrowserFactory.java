@@ -46,27 +46,15 @@ public class BrowserFactory {
 		case "CHROME":
 
 			ChromeOptions capc = new ChromeOptions();
-			capc.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-			capc.setCapability(CapabilityType.PLATFORM, Platform.ANY);
-			capc.getBrowserName();
 			driver = new RemoteWebDriver(new URL(nodeURL), capc);
 			break;
 		case "FIREFOX":
 			FirefoxOptions capf = new FirefoxOptions();
-			capf.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-			capf.setCapability(CapabilityType.PLATFORM, Platform.ANY);
-			capf.getBrowserName();
 			driver = new RemoteWebDriver(new URL(nodeURL), capf);
 
 			break;
 		case "OPERA":
 			OperaOptions capo = new OperaOptions();
-			capo.addArguments("--start-maximized --disable-");
-			capo.setExperimentalOption("useAutomationExtension", false);
-			capo.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
-			capo.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-			capo.setCapability(CapabilityType.PLATFORM, Platform.ANY);
-			capo.getBrowserName();
 			driver = new RemoteWebDriver(new URL(nodeURL), capo);
 
 			break;

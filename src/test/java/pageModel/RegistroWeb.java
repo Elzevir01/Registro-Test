@@ -1,36 +1,23 @@
 package pageModel;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Select;
-
-import js.jScript;
 
 public class RegistroWeb extends pageModel.Base{
-	// WebDriver driver;
-	jScript js = new jScript();
 
 	// ---DATOS PRINCIPALES---//
-	@FindBy(xpath = "//*[@id='usuario']")
-	WebElement txtUsuario;
-	@FindBy(xpath = "//*[@id='nombre']")
-	WebElement txtNombre;
-	@FindBy(xpath = "//*[@id='password']")
-	WebElement txtPassword;
-	@FindBy(xpath = "//*[@id='password2']")
-	WebElement txtPassword2;
-	@FindBy(xpath = "//*[@id='correo']")
-	WebElement txtCorreo;
-	@FindBy(xpath = "//*[@id='telefono']")
-	WebElement txtTelefono;
-	@FindBy(xpath = "//*[@id='terminos']")
-	WebElement chkTerminos;
-	@FindBy(xpath = "//button[text()='Enviar']")
-	WebElement btnAceptar;
-	@FindBy(xpath = "//*[@id='formulario__mensaje']")
-	WebElement msgError;
+	private By txtUsuario = By.xpath("//*[@id='usuario']");
+	private By txtNombre = By.xpath("//*[@id='nombre']");
+	private By txtPassword = By.xpath("//*[@id='password']");
+	private By txtPassword2 = By.xpath("//*[@id='password2']");
+	private By txtCorreo = By.xpath("//*[@id='correo']");
+	private By txtTelefono = By.xpath("//*[@id='telefono']");
+	private By chkTerminos = By.xpath("//*[@id='terminos']");
+	private By btnAceptar = By.xpath("//button[text()='Enviar']");
+	private By msgError = By.xpath("//*[@id='formulario__mensaje']");
 
 	/////CONSTRUCTOR/////
 	public RegistroWeb(WebDriver driver) {
@@ -44,33 +31,33 @@ public class RegistroWeb extends pageModel.Base{
 	////METODOS/////
 	public void sendUsuario(String usuario) {
 		clearText(txtUsuario);
-		sendKey(driver, txtUsuario, usuario);
+		sendKey(txtUsuario, usuario);
 	}
 	public void sendNombre(String nombre) {
 		clearText(txtNombre);
-		sendKey(driver, txtNombre, nombre);
+		sendKey(txtNombre, nombre);
 	}
 	public void sendPassword(String pass) {
 		clearText(txtPassword);
-		sendKey(driver, txtPassword, pass);
+		sendKey(txtPassword, pass);
 	}
 	public void sendPassword2(String pass) {	
 		clearText(txtPassword2);
-		sendKey(driver, txtPassword2, pass);
+		sendKey(txtPassword2, pass);
 	}
 	public void sendCorreo(String correo) {	
 		clearText(txtCorreo);
-		sendKey(driver, txtCorreo, correo);
+		sendKey(txtCorreo, correo);
 	}
 	public void sendTelefono(String telefono) {	
 		clearText(txtTelefono);
-		sendKey(driver, txtTelefono, telefono);
+		sendKey(txtTelefono, telefono);
 	}
 	public void clickTermino() {	
-		clickElement(driver, chkTerminos);
+		findElemento(chkTerminos).click();
 	}
 	public void clickAceptar() {
-		clickElement(driver, btnAceptar);
+		findElemento(btnAceptar).click();
 	}
 	public void error() {
 		checkElement(msgError);

@@ -10,11 +10,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import js.jScript;
-
 public class Base {
 	WebDriver driver;
-	jScript js = new jScript();
 	String expectedTitle = "";
 
 	///// CONSTRUCTOR/////
@@ -27,73 +24,59 @@ public class Base {
 	}
 
 	//// METODOS/////
-	public void clickElement(WebDriver driver, WebElement elemento) {
-		js.highLight(driver, elemento);
-		elemento.click();
+	public WebElement findElemento(By elemento) {
+		return driver.findElement(elemento);
 	}
 
-	public void clickElementFocus(WebDriver driver, WebElement elemento) {
-		js.moveyhightlight(driver, elemento);
-		elemento.click();
-		js.waitForPageToLoad(driver);
+	public void clickElemento(By elemento) {
+		findElemento(elemento).click();
 	}
 
-	public void sendKey(WebDriver driver, WebElement elemento, String texto) {
-		js.highLight(driver, elemento);
-		elemento.sendKeys(texto);
+	public void sendKey(By elemento, String texto) {
+		findElemento(elemento).sendKeys(texto);
 	}
 
-	public void cursorTo(WebDriver driver, WebElement elemento) {
-		js.highLight(driver, elemento);
-		new Actions(driver).moveToElement(elemento).perform();
+	public void clearText(By elemento) {
+		findElemento(elemento).clear();
 	}
 
-	public boolean checkElement(WebElement elemento) {
-		try {
-			if (elemento.isDisplayed()) {
-				System.out.println("Elemento: [ " + elemento.getText() + " ] Existe");
-			}
-			return true;
-		} catch (org.openqa.selenium.NoSuchElementException e) {
-			System.out.println("Elemento: [ " + elemento.getText() + " ]X NO Existe");
-			return false;
-		}
+	public void cursorTo(By elemento) {
+		new Actions(driver).moveToElement(findElemento(elemento)).perform();
 	}
 
 	public void navegar(String url) {
 		driver.get(url);
-		js.waitForPageToLoad(driver);
 	}
 
 	public String titulo(WebDriver driver) {
 		return driver.getTitle();
 	}
 
-	public String getText(WebElement elemento) {
-		if (checkElement(elemento))
-			return elemento.getText();
-		else
-			return "";
-	}
 	public void clearText(WebElement elemento) {
-		js.highLight(driver, elemento);
 		elemento.clear();
 	}
-	public void esperarXpath(WebDriver driver, String elemento) {
-		
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(elemento)));
-		
+
+	public void esperarElemento(By elemento) {
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(elemento));
 	}
-	public void esperarCss(WebDriver driver, String elemento) {
-		WebDriverWait wait = new WebDriverWait(driver,  Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(elemento)));
-		
-	}
+
 	public void esperarWeb() {
-		js.waitForPageToLoad(driver);
 	}
+
 	public void confirmarTitulo(String titulo) {
 		ExpectedConditions.titleIs(titulo);
+	}
+
+	public boolean checkElement(By elemento) {
+		try {
+			if (findElemento(elemento).isDisplayed()) {
+				System.out.println("Element exist");
+			}
+			return true;
+		} catch (org.openqa.selenium.NoSuchElementException e) {
+			System.out.println("Element NO exist");
+			return false;
+		}
 	}
 }
