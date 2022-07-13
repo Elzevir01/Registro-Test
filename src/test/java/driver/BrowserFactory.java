@@ -20,9 +20,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BrowserFactory {
-	DesiredCapabilities desiredCapability;
 	WebDriver driver;
-	String nodeURL = "";
 
 	public BrowserFactory() {
 
@@ -81,7 +79,9 @@ public class BrowserFactory {
 			}
 		}
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		return driver;
 
 	}
