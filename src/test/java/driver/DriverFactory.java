@@ -22,8 +22,4 @@ public DriverFactory() {
 	public void setDriver(WebDriver driverParam) {
 		driver.set(driverParam);
 	}
-	public void closeBrowser() {
-		driver.get().close();
-		driver.remove();
-	}
 }

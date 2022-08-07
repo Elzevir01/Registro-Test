@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-05-24T23:55:29 ART" name="TestSuite" finished-at="2022-05-24T23:57:06 ART" duration-ms="96752">
+  <suite started-at="2022-08-06T21:09:26 ART" name="TestSuite" finished-at="2022-08-06T21:10:27 ART" duration-ms="61728">
     <groups>
     </groups>
-    <test started-at="2022-05-24T23:55:29 ART" name="CHROME" finished-at="2022-05-24T23:57:06 ART" duration-ms="96752">
+    <test started-at="2022-08-06T21:09:26 ART" name="ANCHROME" finished-at="2022-08-06T21:10:27 ART" duration-ms="61728">
       <class name="com.registro.RegistroTest">
-        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:55:29 ART" name="beforeTest" finished-at="2022-05-24T23:55:56 ART" duration-ms="26607" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:09:26 ART" name="beforeTest" finished-at="2022-08-06T21:09:49 ART" duration-ms="22872" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[CHROME]]>
+                <![CDATA[ANCHROME]]>
               </value>
             </param>
             <param index="1">
               <value>
-                <![CDATA[http://localhost:4444/wd/hub]]>
+                <![CDATA[http://127.0.0.1:4723/wd/hub/]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:55:57 ART" name="f" data-provider="DP" finished-at="2022-05-24T23:56:15 ART" duration-ms="18363" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:09:49 ART" name="f" data-provider="DP" finished-at="2022-08-06T21:09:59 ART" duration-ms="9295" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -76,10 +76,74 @@
               </value>
             </param>
           </params>
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos"> is not clickable at point (71, 112). Other element would receive the click: <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567" value="4491234567">
+  (Session info: chrome=103.0.5060.129)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'elzevir-N56VB', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-122-generic', java.version: '17.0.4'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6dfd8e9b-2ecb-4997-b3ba-8bd6b56acc68, clickElement {id=4d6810b4-8855-4d3b-9c1a-40d644acc7ad}]
+Capabilities {appium:adbExecTimeout: 60000, appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:automationName: UiAutomator2, appium:chromedriverExecutable: /home/WebDriver/chromedriver, appium:chromedriverUseSystemExecutable: true, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: /home/WebDriver/chromedriver, chromedriverUseSystemExecutable: true, deviceName: SM-J71MN, goog:chromeOptions: {args: [], extensions: []}, newCommandTimeout: 60, platformName: android, platformVersion: 8.1.0, udid: 52032936c0e08321}, appium:deviceApiLevel: 27, appium:deviceManufacturer: samsung, appium:deviceModel: SM-J710MN, appium:deviceName: 52032936c0e08321, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1280, appium:deviceUDID: 52032936c0e08321, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:udid: 52032936c0e08321, appium:viewportRect: {height: 1232, left: 0, top: 48, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
+Element: [[AndroidDriver: chrome on ANDROID (6dfd8e9b-2ecb-4997-b3ba-8bd6b56acc68)] -> xpath: //*[@id='terminos']]
+Session ID: 6dfd8e9b-2ecb-4997-b3ba-8bd6b56acc68]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos"> is not clickable at point (71, 112). Other element would receive the click: <input type="text" class="formulario__input" name="telefono" id="telefono" placeholder="4491234567" value="4491234567">
+  (Session info: chrome=103.0.5060.129)
+Build info: version: '4.3.0', revision: 'a4995e2c09*'
+System info: host: 'elzevir-N56VB', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '5.4.0-122-generic', java.version: '17.0.4'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [6dfd8e9b-2ecb-4997-b3ba-8bd6b56acc68, clickElement {id=4d6810b4-8855-4d3b-9c1a-40d644acc7ad}]
+Capabilities {appium:adbExecTimeout: 60000, appium:appActivity: com.google.android.apps.chr..., appium:appPackage: com.android.chrome, appium:automationName: UiAutomator2, appium:chromedriverExecutable: /home/WebDriver/chromedriver, appium:chromedriverUseSystemExecutable: true, appium:databaseEnabled: false, appium:desired: {adbExecTimeout: 60000, automationName: UiAutomator2, browserName: chrome, chromedriverExecutable: /home/WebDriver/chromedriver, chromedriverUseSystemExecutable: true, deviceName: SM-J71MN, goog:chromeOptions: {args: [], extensions: []}, newCommandTimeout: 60, platformName: android, platformVersion: 8.1.0, udid: 52032936c0e08321}, appium:deviceApiLevel: 27, appium:deviceManufacturer: samsung, appium:deviceModel: SM-J710MN, appium:deviceName: 52032936c0e08321, appium:deviceScreenDensity: 320, appium:deviceScreenSize: 720x1280, appium:deviceUDID: 52032936c0e08321, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:newCommandTimeout: 60, appium:pixelRatio: 2, appium:platformVersion: 8.1.0, appium:statBarHeight: 48, appium:takesScreenshot: true, appium:udid: 52032936c0e08321, appium:viewportRect: {height: 1232, left: 0, top: 48, width: 720}, appium:warnings: {}, appium:webStorageEnabled: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}, platformName: ANDROID}
+Element: [[AndroidDriver: chrome on ANDROID (6dfd8e9b-2ecb-4997-b3ba-8bd6b56acc68)] -> xpath: //*[@id='terminos']]
+Session ID: 6dfd8e9b-2ecb-4997-b3ba-8bd6b56acc68
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:569)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+at pageModel.RegistroWeb.clickTermino(RegistroWeb.java:57)
+at pageModel.RegistroWeb.checkyAceptar(RegistroWeb.java:79)
+at com.registro.RegistroTest.f(RegistroTest.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.access$000(SuiteRunner.java:28)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:418)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:833)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:56:15 ART" name="f" data-provider="DP" finished-at="2022-05-24T23:56:26 ART" duration-ms="10430" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:09:59 ART" name="f" data-provider="DP" finished-at="2022-08-06T21:10:05 ART" duration-ms="6252" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -135,7 +199,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:56:26 ART" name="f" data-provider="DP" finished-at="2022-05-24T23:56:35 ART" duration-ms="9925" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:10:05 ART" name="f" data-provider="DP" finished-at="2022-08-06T21:10:10 ART" duration-ms="5164" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -191,7 +255,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:56:35 ART" name="f" data-provider="DP" finished-at="2022-05-24T23:56:46 ART" duration-ms="10366" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:10:10 ART" name="f" data-provider="DP" finished-at="2022-08-06T21:10:15 ART" duration-ms="5156" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -247,7 +311,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:56:46 ART" name="f" data-provider="DP" finished-at="2022-05-24T23:56:56 ART" duration-ms="10034" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:10:15 ART" name="f" data-provider="DP" finished-at="2022-08-06T21:10:21 ART" duration-ms="5889" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -303,7 +367,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:56:56 ART" name="f" data-provider="DP" finished-at="2022-05-24T23:57:06 ART" duration-ms="9872" status="PASS">
+        <test-method signature="f(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:10:21 ART" name="f" data-provider="DP" finished-at="2022-08-06T21:10:27 ART" duration-ms="5393" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -359,11 +423,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.registro.RegistroTest@d9345cd]" started-at="2022-05-24T23:57:06 ART" name="tearDown" finished-at="2022-05-24T23:57:06 ART" duration-ms="355" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.registro.RegistroTest@1bdf8190]" started-at="2022-08-06T21:10:27 ART" name="tearDown" finished-at="2022-08-06T21:10:27 ART" duration-ms="824" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.registro.RegistroTest -->
-    </test> <!-- CHROME -->
+    </test> <!-- ANCHROME -->
   </suite> <!-- TestSuite -->
 </testng-results>

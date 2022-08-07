@@ -3,20 +3,17 @@ package driver;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
-import java.util.Collections;
 
-import org.openqa.selenium.Platform;
-import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.opera.OperaOptions;
-import org.openqa.selenium.remote.CapabilityType;
+
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 public class BrowserFactory {
@@ -51,25 +48,26 @@ public class BrowserFactory {
 			driver = new RemoteWebDriver(new URL(nodeURL), capf);
 
 			break;
-		case "OPERA":
-			OperaOptions capo = new OperaOptions();
-			driver = new RemoteWebDriver(new URL(nodeURL), capo);
-
-			break;
-		case "ANDROID":
+		case "ANCHROME":
 			try {
-					String nodeappiumURL = "http://localhost:4723/wd/hub";
-					DesiredCapabilities caps = new DesiredCapabilities();
-					caps.setCapability(MobileCapabilityType.PLATFORM_NAME, "ANDROID");
-					caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, "8.1.0");
-					caps.setCapability(MobileCapabilityType.DEVICE_NAME, "SM-J71MN");
-					caps.setCapability(MobileCapabilityType.UDID, "52032936c0e08321");
-					caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
-					caps.setCapability(MobileCapabilityType.BROWSER_NAME, "CHROME");
-					caps.getBrowserName();
-					URL node = new URL(nodeURL);
-					//driver = new RemoteWebDriver(new URL(nodeappiumURL), caps);
-					driver= new AppiumDriver<MobileElement>(node, caps);
+				UiAutomator2Options options = new UiAutomator2Options()
+				.setPlatformName("Android")
+				.setDeviceName("SM-J71MN")//"emulator-5554"//"SM-J71MN"
+				.setAdbExecTimeout(Duration.ofSeconds(150))
+				.setAutomationName("UiAutomator2")
+				//.setAppPackage("com.android.chrome")
+				//.setAppActivity("com.google.android.apps.chrome.Main")
+				.setNewCommandTimeout(Duration.ofSeconds(60))
+				.setAdbExecTimeout(Duration.ofSeconds(60))
+				.setChromedriverExecutable("/home/WebDriver/chromedriver")
+				.setChromedriverUseSystemExecutable(true)
+				//.setUnlockKey("1526")
+				.setUdid("52032936c0e08321")
+				.setPlatformVersion("8.1.0");//"8.1.0"//11
+				ChromeOptions opt=new ChromeOptions();
+				options.setCapability(ChromeOptions.CAPABILITY, opt);
+				
+				driver = new AndroidDriver(new URL(nodeURL),options);
 					break;
 					
 			}catch(Exception exp) {
@@ -78,10 +76,12 @@ public class BrowserFactory {
 				exp.printStackTrace();
 			}
 		}
+		if(browser!="ANDROID") {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+		}
 		return driver;
 
 	}
