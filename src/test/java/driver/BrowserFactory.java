@@ -58,7 +58,6 @@ public class BrowserFactory {
 				//.setAppPackage("com.android.chrome")
 				//.setAppActivity("com.google.android.apps.chrome.Main")
 				.setNewCommandTimeout(Duration.ofSeconds(60))
-				.setAdbExecTimeout(Duration.ofSeconds(60))
 				.setChromedriverExecutable("/home/WebDriver/chromedriver")
 				.setChromedriverUseSystemExecutable(true)
 				//.setUnlockKey("1526")
@@ -82,7 +81,6 @@ public class BrowserFactory {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
 		}
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 		return driver;
 
 	}
