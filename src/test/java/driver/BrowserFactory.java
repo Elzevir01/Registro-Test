@@ -76,7 +76,7 @@ public class BrowserFactory {
 				exp.printStackTrace();
 			}
 		}
-		if(browser!="ANDROID") {
+		if(browser!="ANCHROME") {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
