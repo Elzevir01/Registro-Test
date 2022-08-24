@@ -64,12 +64,6 @@
 			<artifactId>selenium-firefox-driver</artifactId>
 			<version>4.1.4</version>
 		</dependency>
-		<!-- OPERA DRIVER -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-opera-driver</artifactId>
-			<version>4.1.4</version>
-		</dependency>
 		<!-- TEST-NG -->
 		<dependency>
 			<groupId>org.testng</groupId>

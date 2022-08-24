@@ -58,6 +58,7 @@ public class BrowserFactory {
 				//.setAppPackage("com.android.chrome")
 				//.setAppActivity("com.google.android.apps.chrome.Main")
 				.setNewCommandTimeout(Duration.ofSeconds(60))
+				
 				.setChromedriverExecutable("/home/WebDriver/chromedriver")
 				.setChromedriverUseSystemExecutable(true)
 				//.setUnlockKey("1526")
@@ -86,7 +87,7 @@ public class BrowserFactory {
 	}
 
 	public void removeDriver() {
-		driver.close();
+		//driver.close();
 		driver.quit();
 
 	}
