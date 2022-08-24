@@ -76,7 +76,7 @@ public class BrowserFactory {
 				exp.printStackTrace();
 			}
 		}
-		if(browser!="ANCHROME") {
+		if(browser == "CHROME" || browser == "FIREFOX" || browser == "EDGE") {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
